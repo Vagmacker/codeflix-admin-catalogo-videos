@@ -1,0 +1,6 @@
+@FC.Codeflix.Catalog.Api_HostAddress = http://localhost:5296
+
+GET {{FC.Codeflix.Catalog.Api_HostAddress}}/category/01ae2e2c-e532-474e-91be-0c1b7e35d344
+Accept: application/json
+
+###
