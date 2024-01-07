@@ -7,18 +7,11 @@ namespace FC.Codeflix.Catalog.IntegrationTests.Fixtures;
 public class BaseFixture
 {
     protected Faker Faker { get; set; } = new("pt_BR");
-    
-    public CodeflixCatalogDbContext CreateDbContext(bool preserveData = false)
-    {
-        var context = new CodeflixCatalogDbContext(
+
+    public CodeflixCatalogDbContext CreateDbContext()
+        => new(
             new DbContextOptionsBuilder<CodeflixCatalogDbContext>()
                 .UseInMemoryDatabase("integration-tests")
                 .Options
         );
-
-        if (preserveData == false)
-            context.Database.EnsureDeleted();
-
-        return context;
-    }
 }

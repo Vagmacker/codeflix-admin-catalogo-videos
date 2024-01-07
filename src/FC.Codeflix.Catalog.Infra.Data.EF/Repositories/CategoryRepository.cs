@@ -18,12 +18,12 @@ public class CategoryRepository(CodeflixCatalogDbContext context) : ICategoryRep
         if (!string.IsNullOrWhiteSpace(input.Terms))
             query = query.Where(category => category.Name.Contains(input.Terms));
 
-        var total = await query.CountAsync(cancellationToken);
+        var total = await query.CountAsync();
 
         var items = await query
             .Skip(toSkip)
             .Take(input.PerPage)
-            .ToListAsync(cancellationToken);
+            .ToListAsync();
 
         return new Page<Category>(input.Page, input.PerPage, total, items);
     }
