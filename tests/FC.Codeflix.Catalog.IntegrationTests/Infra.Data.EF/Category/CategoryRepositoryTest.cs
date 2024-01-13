@@ -6,8 +6,8 @@ using CategoryEntity = FC.Codeflix.Catalog.Domain.Category.Category;
 
 namespace FC.Codeflix.Catalog.IntegrationTests.Infra.Data.EF.Category;
 
-[Collection(nameof(CategoryRepositoryFixture))]
-public class CategoryRepositoryTest(CategoryRepositoryFixture fixture) : IDisposable
+[Collection(nameof(CategoryFixture))]
+public class CategoryRepositoryTest(CategoryFixture fixture) : IDisposable
 {
     [Fact(DisplayName = nameof(GivenAValidCategory_WhenCallsInsert_ShouldReturnANewCategory))]
     [Trait("Integration/Infra.Data", "CategoryRepository")]

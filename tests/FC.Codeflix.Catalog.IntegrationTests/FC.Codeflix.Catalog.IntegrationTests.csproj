@@ -26,8 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Application\Category\Create\" />
-      <Folder Include="Application\Category\Delete\" />
       <Folder Include="Application\Category\Retrieve\List\" />
       <Folder Include="Application\Category\Update\" />
     </ItemGroup>

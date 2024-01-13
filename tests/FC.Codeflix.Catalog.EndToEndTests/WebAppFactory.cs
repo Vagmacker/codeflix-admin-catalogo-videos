@@ -14,7 +14,7 @@ public class WebAppFactory: WebApplicationFactory<Program>, IAsyncLifetime
         .WithImage("mysql:latest")
         .WithUsername("root")
         .WithPassword("123456")
-        .WithDatabase("codeflix")
+        .WithDatabase("adm_videos")
         .Build();
     
     protected override void ConfigureWebHost(IWebHostBuilder builder)
